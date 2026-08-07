@@ -146,6 +146,7 @@
 
     if(page==='index.html'){
       out=out.replace(/<img\s+src="\.\/carte-visite\.png[^>]*\/>/i,'<div id="digiyNeutralCard" style="min-height:190px;display:grid;place-items:center;padding:24px;background:linear-gradient(135deg,#fff0a8,#22c55e);color:#052215;font-size:clamp(24px,7vw,44px);font-weight:1000;line-height:1;text-align:center">MON COMMERCE<br><small style="font-size:14px;margin-top:10px">Carte publique à configurer</small></div>');
+      out=out.replace(/<a href="\.\/ventes\.html">Mes ventes<\/a>/,'<a href="./ventes.html">Mes ventes</a>\n        <a href="./clients.html">Mes clients</a>');
       out=out.replace(/const CARD_PATH="\.\/carte-visite\.png";/,'const CARD_PATH="";');
       out=out.replace(/const cardUrl=\(\)=>new URL\(CARD_PATH,location\.href\)\.href;/,'const cardUrl=()=>publicUrl();');
       out=out.replace(/const title="MON COMMERCE — DIGIY MON COMMERCE";/g,'const title=(businessName()||"MON COMMERCE")+" — DIGIY MON COMMERCE";');
