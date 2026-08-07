@@ -57,8 +57,6 @@
   const $=id=>document.getElementById(id);
   const session=await window.DIGIY_GUARD.requireSession({to:"./pin.html"});
   if(!session)return;
-  const active=await window.DIGIY_GUARD.checkAccess(session.phone);
-  if(!active){window.DIGIY_GUARD.logout("./pin.html");return;}
   $("app").hidden=false;
 
   const owner=String(session.phone||session.slug||"").trim();
