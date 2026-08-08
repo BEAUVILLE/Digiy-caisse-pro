@@ -6,7 +6,7 @@
 (async function(){
   'use strict';
 
-  const SOURCE='./assets/js/pos-secure-loader.js?v=commerce-links-v3-20260808';
+  const SOURCE='./assets/js/pos-secure-loader.js?v=raw-20260807-1550';
   const BAD_BLOCK=`    if(!(await accessAllowed(session.phone))){
       clearAccess();
       fail('Accès MON COMMERCE inactif. Entre un PIN lié à un abonnement POS actif.');
