@@ -131,8 +131,8 @@
     out=out.replace(/Astou boutique/g,'MON COMMERCE');
     out=out.replace(/\bLINEA\b/g,'MON COMMERCE');
     out=out.replace(/Linge de maison/g,'Commerce');
-    out=out.replace(/https:\/\/mon-commerce\.digiylyfe\.com\/fiche-astou\.html/gi,'https://mon-commerce.digiylyfe.com/');
-    out=out.replace(/https:\/\/astou-boutique\.digiylyfe\.com\/?/gi,'');
+    out=out.replace(/https:\/\/mon-commerce\.digiylyfe\.com\/fiche-astou\.html/gi,'https://astou-boutique.digiylyfe.com/?lang=fr');
+    out=out.replace(/https:\/\/astou-boutique\.digiylyfe\.com\/?(?:\?[^"'\s<)]*)?/gi,'https://astou-boutique.digiylyfe.com/?lang=fr');
 
     out=out.replace(/const\s+seedProducts\s*=\s*\[[\s\S]*?\];/,'const seedProducts=[];');
     out=out.replace(/name:'MON COMMERCE',activity:'Commerce'/g,"name:'MON COMMERCE',activity:'Commerce'");
